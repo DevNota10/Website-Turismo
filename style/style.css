@@ -52,10 +52,22 @@ header .logo {
     background-position: center;
     background-repeat: no-repeat;
 }
+   
+header #btn-mobile{
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+    background-image: url(../img/casa.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
 
 header nav #menu {
     display: inline-flex;
-    gap: 80px;
+    gap: 20px;
 }
  header  nav #menu li:hover {
     background: #01371190; 
@@ -77,22 +89,22 @@ a {
 header  .sub-menu  {
     max-width: 100%;
     display: none;
-    transition: 0.5s;
+    transition: 0.5s; 
 }
 
 header #menu li{
     padding: 1rem;
     position: relative;
     transition: 0.5s;
-
 }
 
-header nav #menu li:hover .sub-menu{
+header nav #menu li .sub-menu.subMenuActivo{
    display: block;
    position: absolute;
    background: linear-gradient(#008000,#ffa500,#00fbff);
    top: 50px;
    left: 0;  
+   transition: 0.5s;
 
 }
 
@@ -102,8 +114,6 @@ h1{
     font-size: 200px;
     text-align: center;
     color: #fff;
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 h2{
@@ -122,13 +132,9 @@ h3 {
 }
 
 section{
-    width: 100%;
+    max-width: 100%;
     position: relative;
     top: 90px;
-}
-
-.container{
-    padding: 0 2%;
 }
 
 span{
@@ -139,6 +145,8 @@ span{
     background: rgb(20, 20, 1);
     float: right;
 }
+
+
 
 section.background-main video {
      width: 100%; 
@@ -162,7 +170,6 @@ section.background-main .chamada-01 {
 }
 
 section.background-main h1 {
-    font-size: 200px;
     color: #fff;
     background: -webkit-linear-gradient(45deg, #0000ff6f, #4dff00b8, #00800055);
 
@@ -239,7 +246,7 @@ section.seasons h1{
     text-shadow: 5px 5px 1px  #95949455;
 }
 
-section.seasons div.inverno p{
+section div.inverno p{
     font-size: 30px;
     padding: 10px;
     background: linear-gradient(-45deg,#00a6ff,#fff);
@@ -261,8 +268,6 @@ section.primavera{
 }
 
 section.primavera h1{
-    font-size: 200px;
-    text-align: center;
     background: linear-gradient(-45deg,#3b6603,#06e606);
     color: #000;
     
@@ -295,10 +300,10 @@ section.verao{
 }
 
 section.verao h1{
-    font-size: 200px;
-    text-align: center;
+ 
     background: linear-gradient(-45deg,#3b6603,#06e606);
     color: #000;
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 5px 5px 1px  #e3ca0afe;
@@ -327,8 +332,6 @@ section.outono{
 }
 
 section.outono h1{
-    font-size: 200px;
-    text-align: center;
     background: linear-gradient(-45deg,#ed3203,#06e606);
     color: #000;
     -webkit-background-clip: text;
@@ -340,5 +343,121 @@ section.outono div.outono p{
     font-size: 30px;
     padding: 10px;
     background: linear-gradient(-45deg,#ff5100,#f0d908,green);
+}
 
+
+/* *************************************** Media Queries  *************************************** */
+@media screen and (max-width:950px) {
+
+    section h1{
+    font-size: 130px;
+    }
+    
+}
+
+@media screen and (max-width:700px) {
+
+    header .container {
+    flex-direction: column;
+    align-items: center;
+        justify-content: center;
+    }
+
+   header #btn-mobile{
+    display: flex;
+    gap: 5px;
+    position:absolute;
+    right: 5px;
+    top: 50px;
+    /* background: none; */
+    border: 0;
+
+    padding: .5rem 1rem;
+    }
+
+    header nav #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        
+        top: 90px;
+        right: 0;
+        background: linear-gradient(-45deg,#008000,#ffa500,#00fbff);
+        z-index: 99;
+        transition: 1s;
+        visibility: hidden;
+        overflow-y: hidden;
+   
+    }
+
+    header nav.active #menu{
+       display: block;
+        top: 90px;
+        height:calc(100vh - 90px);
+        transition: 1s;
+        visibility: visible;
+        /* overflow-y: auto; */
+     
+    }
+    #menu li{
+        border-bottom: 1px solid #ccc;
+    }
+   
+     header nav #menu li .sub-menu.subMenuActivo{
+        width: 100%;
+        position: absolute;
+        background: linear-gradient(#008000,#ffa500,#00fbff);
+        top: 0px;
+        left: 110px;  
+        z-index: 99;
+
+     }
+
+     
+
+
+     /* Media queries sections */
+
+     section h1{
+        font-size: 100px;
+    
+    }
+    section.background-main .chamada-01 {
+        top: 0;
+    }
+        
+    section.background-main p {
+    font-size: 20px;
+    }
+
+    section.sobre .container{
+        display: block;
+        padding: 0 2%;
+
+    }
+    section.sobre .text-wrapper{
+        max-width: 100%;
+
+    }
+    section.sobre .img-sobre{
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width:500px) {
+    section h1{
+        font-size: 70px;
+    
+    }
+    section span{
+        font-size: 12px;
+    }
+ 
+    section.background-main p {
+        font-size: 15px;
+        }
+  
 }

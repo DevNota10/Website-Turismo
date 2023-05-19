@@ -26,6 +26,7 @@ const links = document.querySelectorAll("nav a[href^='#']");
 
 links.forEach((link)=>{
     link.addEventListener('click', scrollToSection)
+
    
 })
 
@@ -54,6 +55,33 @@ function smoothScrollTo(endX, endY, duration) {
       window.scroll(newX, newY);
     }, 1000 / 60);
   }
+   
+  // btn-Mobile:
+  const btnMobile = document.getElementById("btn-mobile")
+  function toggleMenu(){
+
+    const nav = document.querySelector("nav");
+    nav.classList.toggle('active');
+
+  }
+
+    btnMobile.addEventListener("click", toggleMenu);
+
+
+const estacoes = document.getElementById("estacoes");
+ estacoes.addEventListener("click",()=>{
+  console.log('clicou')
+
+  subMenuAct()
+
+ })
 
 }
+function subMenuAct(){
+  const subMenu = document.querySelector(".sub-menu");
+ subMenu.classList.toggle("subMenuActivo")
+
+}
+
+
 
