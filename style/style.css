@@ -141,7 +141,7 @@ img {
 
 section {
     max-width: 100%;
-    position: relative;
+    /* position: relative; */
     top: 90px;
 }
 
@@ -358,7 +358,6 @@ section.outono div.outono p {
 
 /* *************************************** Section Contato *************************************** */
 
-
 section.contato {
     width: 100%;
     height: 100%;
@@ -423,7 +422,7 @@ footer {
     height: 400px;
     background: linear-gradient(-45deg, #ff5100, #f0d908, #008000);
     position: relative;
-    top: 90px;
+
 }
 
 footer .logo-footer {
@@ -460,6 +459,21 @@ footer .text-footer {
 footer .copy {
     width: 20px;
 
+}
+
+/* Animação div.seasons */
+[data-anime]{
+    opacity: 0;
+    transition: .3s;
+}
+
+[data-anime="top"]{
+    transform: translate3d(0, -200px,0);
+}
+
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px ,0px, 0px);
 }
 
 /* Animation gradient  */
