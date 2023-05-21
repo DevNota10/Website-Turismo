@@ -2,12 +2,42 @@
 window.onload = function(){
 
 
+  
+    // btn-Mobile:
+ 
+
+      const btnMobile = document.getElementById("btn-mobile");
+      function toggleMenu(){
+  
+        const nav = document.querySelector("nav");
+        nav.classList.toggle('active');
+        console.log("clicou")
+  
+      }
+        btnMobile.addEventListener("click", toggleMenu);
+  
+    const estacoes = document.getElementById("estacoes");
+    estacoes.addEventListener("click",()=>{
+      subMenuAct();
+      return 
+  
+    })
+
+  function subMenuAct(){
+    const subMenu = document.querySelector(".sub-menu");
+    subMenu.classList.toggle("subMenuActivo");
+  
+  }
 
   // ScrollSuave:
   const links = document.querySelectorAll("nav a[href^='#']");
       function getDistanceFromTheTop(element){
         const id = element.getAttribute('href');
+        if('active'){
+          document.querySelector('nav').classList.remove('active');
+        }
         return document.querySelector(id).offsetTop;
+         
       }
 
       // function nativeScroll(distanceFromTheTop){
@@ -21,13 +51,12 @@ window.onload = function(){
           event.preventDefault();
           const distanceFromTheTop = getDistanceFromTheTop(event.target) -90;
           smoothScrollTo(0, distanceFromTheTop)
+ 
       };
-
 
   links.forEach((link)=>{
       link.addEventListener('click', scrollToSection);
-
-    
+     
   })
 
   function smoothScrollTo(endX, endY, duration) {
@@ -56,30 +85,8 @@ window.onload = function(){
       }, 1000 / 60);
     }
     
-    // btn-Mobile:
-    const btnMobile = document.getElementById("btn-mobile");
-    function toggleMenu(){
-
-      const nav = document.querySelector("nav");
-      nav.classList.toggle('active');
-    }
-      btnMobile.addEventListener("click", toggleMenu);
-
-  const estacoes = document.getElementById("estacoes");
-  estacoes.addEventListener("click",()=>{
-    subMenuAct();
-
-  })
-
-  function subMenuAct(){
-    const subMenu = document.querySelector(".sub-menu");
-    subMenu.classList.toggle("subMenuActivo");
-  
-  }
-
+//  ------------------------------------------------------
   // Animate div-Seasons
-
-  // revisar animação:
   animateBoxSeasons =()=>{
     const boxAnime = document.querySelectorAll("[data-anime]");
     const animationClass = 'animate';
@@ -90,8 +97,7 @@ window.onload = function(){
       boxAnime.forEach(function(el){
        if((windowTop) > el.offsetTop){
         el.classList.add(animationClass);
-       
-
+      
        }else{
         el.classList.remove(animationClass);
        }
