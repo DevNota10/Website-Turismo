@@ -52,7 +52,7 @@ header .logo {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    /* border: 1px solid red; */
+    
 }
 
 header #btn-mobile {
@@ -141,7 +141,7 @@ img {
 
 section {
     max-width: 100%;
-    /* position: relative; */
+    position: relative;
     top: 90px;
 }
 
@@ -160,12 +160,14 @@ section p{
 }
 
 span {
-
+    margin: 0 auto;
+    /* width: 200px; */
     display: block;
+    text-align: center;
     color: #fff;
     font-size: 18px;
     background: rgb(20, 20, 1);
-    float: right;
+   
 }
 
 section.background-main video {
@@ -179,27 +181,40 @@ section.background-main {
 }
 
 section.background-main .chamada-01 {
-    max-width: 100%;
+    width: 70%;
     text-align: center;
     justify-content: center;
 
     position: absolute;
-    top: 22%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
+
 }
 
 section.background-main h1 {
-    color: #fff;
     background: -webkit-linear-gradient(45deg, #0000ff6f, #4dff00b8, #00800055);
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-section.background-main p {
-    background: linear-gradient(-45deg, #0ceb0c, #008000, #ffff00);
+section.background-main .quote {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 19px;
+   
+    position:absolute;
+    bottom: 0px;
+    right: 0;
 }
+section.background-main p {
+    /* background: linear-gradient(-45deg, #0ceb0c, #008000, #ffff00); */
+    background: linear-gradient(-45deg, #0ceb0c7e,#000 70%, #0080003a, #ffff005d,#000);
+   font-size: 20px;
+   color: #fff;
+   text-shadow: 7px 7px 7px #000;
+
+}
+
 
 /* *************************************** Section Sobre *************************************** */
 section.sobre {
@@ -495,7 +510,7 @@ footer .copy {
 /* *************************************** Media Queries  *************************************** */
 
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:1200px) {
 
     section h1 {
         font-size: 130px;
@@ -506,9 +521,14 @@ footer .copy {
         /* background: rgb(106, 255, 0); */
         gap: 30px;
     }
+    section.background-main .chamada-01 {
+        width: 100%;
+        top: 0;
+        
+    }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:750px) {
 
     header .container {
         flex-direction: column;
@@ -572,16 +592,13 @@ footer .copy {
     /* Media queries sections */
 
     section h1 {
-        font-size: 100px;
+        font-size: 70px;
 
-    }
-
-    section.background-main .chamada-01 {
-        top: 0;
     }
 
     section.background-main p {
-        font-size: 20px;
+        font-size: 15px;
+        text-align: justify;
     }
 
     section.sobre .container {
@@ -599,13 +616,15 @@ footer .copy {
         background-size: cover;
     }
 
-
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:540px) {
 
     section h1 {
         font-size: 50px;
+    }
+    section.background-main .chamada-01 p{
+       display: none;
     }
 
     section p{

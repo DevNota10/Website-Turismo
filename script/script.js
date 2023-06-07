@@ -1,17 +1,14 @@
 
 window.onload = function(){
-
-
   
     // btn-Mobile:
  
-
       const btnMobile = document.getElementById("btn-mobile");
       function toggleMenu(){
   
         const nav = document.querySelector("nav");
         nav.classList.toggle('active');
-        console.log("clicou")
+       
   
       }
         btnMobile.addEventListener("click", toggleMenu);
@@ -26,7 +23,7 @@ window.onload = function(){
   function subMenuAct(){
     const subMenu = document.querySelector(".sub-menu");
     subMenu.classList.toggle("subMenuActivo");
-  
+ 
   }
 
   // ScrollSuave:
