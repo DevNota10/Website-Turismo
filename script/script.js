@@ -27,7 +27,7 @@ window.onload = function(){
   }
 
   // ScrollSuave:
-  const links = document.querySelectorAll("nav a[href^='#']");
+  const links = document.querySelectorAll("header nav a[href^='#']");
       function getDistanceFromTheTop(element){
         const id = element.getAttribute('href');
         if('active'){
@@ -106,6 +106,52 @@ window.onload = function(){
     })
   }
   animateBoxSeasons()
+
+
+  // Animações Hover links;
+
+  function hoverLinks(){
+    const ColorParagrafoEstações = document.querySelectorAll(".text");
+    const sidebarLi = document.querySelectorAll("section .sidebar li a");
+
+    sidebarLi.forEach((item,posLi)=>{
+  
+      item.addEventListener('mouseover',function(){
+        item.classList.add('img-li')
+        const section = document.querySelectorAll(".section-img-place");// getbackground main
+   
+
+          if('img-li'){
+            
+            const imgOfPlace = document.querySelector(".img-li .img-of-place");
+            const getImgOfPlace = window.getComputedStyle(imgOfPlace);
+
+            section[0].style.background = getImgOfPlace.backgroundImage
+            section[0].style.backgroundSize = 'cover'
+            section[0].style.backgroundRepeat = 'no-repeat'
+            section[0].style.transition = '0.5s'
+     
+             }else{
+               console.log('não tem')
+                              
+
+        }
+             
+        item.addEventListener('mouseout',function(){
+          item.classList.remove('img-li');
+          document.querySelector(".section-img-place").style.background= "url(./landscape/temple-5909803_1920.jpg)"
+        
+        })
+
+        
+      })
+    })
+    
+    
+   
+
+  }
+  hoverLinks()
 
 }
 

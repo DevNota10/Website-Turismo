@@ -9,7 +9,8 @@
 }
 
 body {
-    /* height: 4000px; */
+   height: 100%;
+   background: #000;
 }
 
 /* html{
@@ -140,16 +141,20 @@ img {
 }
 
 section {
-    max-width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     position: relative;
     top: 90px;
 }
-
+p{
+    padding: 10px;
+}
 section p{
     font-size: 30px;
-    padding: 10px;
     text-align: center;
 }
+
+
 
 .container {
     margin: 0 auto;
@@ -157,6 +162,8 @@ section p{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0 2%;
+   
 }
 
 span {
@@ -178,6 +185,7 @@ section.background-main video {
 section.background-main {
     width: 100%;
     max-width: 100%;
+ 
 }
 
 section.background-main .chamada-01 {
@@ -221,7 +229,7 @@ section.sobre {
     width: 100%;
     max-height: 100%;
     background: #130000;
-    padding: 20px;
+    
 }
 
 section.sobre .container {
@@ -244,7 +252,6 @@ section.sobre p {
     color: #fff;
     font-size: 18px;
     text-align: justify;
-    padding: 15px;
 
 }
 
@@ -258,9 +265,36 @@ section.sobre .img-sobre {
     border-radius: 30px;
 }
 
+
 /* *************************************** Section Inverno *************************************** */
 
-section.seasons {
+section .sidebar li{
+    width: 100%;
+    margin-bottom: 10px;
+    /* background: green; */
+}
+section .sidebar a {
+    display: block;
+    color: #000;
+    display: flex;
+    align-items: center;
+    
+  
+}
+
+/* section .sidebar li a:hover{
+    background: red;
+        VIA JS
+} */
+
+
+section.section-img-place .sidebar  .img-li{
+    width: 100%;
+    height: 100px;
+    transition: 0.5s;
+}
+
+section.inverno {
     width: 100%;
     height: 100vh;
 
@@ -274,7 +308,7 @@ section.seasons {
     background-repeat: no-repeat;
 }
 
-section.seasons h1 {
+section.inverno h1 {
     background: #ffffffbe;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -283,6 +317,38 @@ section.seasons h1 {
 
 section div.inverno p {
     background: linear-gradient(-45deg, #00a6ff, #fff);
+    /* background-image: url(../img-Rs/bandeira-de-rio-grande-do-sul-brasil.webp); */
+}
+
+section .sidebar{
+    width: 300px;
+    max-height: 100%;
+    padding: 10px;
+    background: #000;
+}
+section .sidebar li{
+    background-position: center;
+    background-size: cover;
+
+}
+section.inverno .sidebar a {
+    background: linear-gradient(-45deg, #00a6ff, #fff);
+
+}
+
+section.section-img-place .sidebar a  .img-of-place{
+    width: 50%;
+    height: 100%;
+  
+    position: relative;
+    right: -250px;
+    transform: scale(1.2);
+   
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+   
 }
 
 /* *************************************** Section Primavera *************************************** */
@@ -312,6 +378,12 @@ section.primavera h1 {
 section.primavera div.primavera p {
     background: linear-gradient(-45deg, #26ff00, #fff);
 }
+
+section.primavera .sidebar a {
+    background: linear-gradient(-45deg, #26ff00, #fff);
+
+}
+
 
 /* *************************************** Section Verão *************************************** */
 
@@ -343,6 +415,11 @@ section.verao div.verao p {
     background: linear-gradient(-45deg, #ff5100, #f0d908);
 }
 
+section.verao .sidebar a {
+    background: linear-gradient(-45deg, #ff5100, #f0d908);
+
+}
+
 /* *************************************** Section Outono *************************************** */
 
 section.outono {
@@ -369,6 +446,11 @@ section.outono h1 {
 
 section.outono div.outono p {
     background: linear-gradient(-45deg, #ff5100, #f0d908, green);
+}
+
+section.outono .sidebar a {
+    background: linear-gradient(-45deg, #ff5100, #f0d908, green);
+
 }
 
 /* *************************************** Section Contato *************************************** */
@@ -547,6 +629,7 @@ footer .copy {
         border: 0;
 
         padding: .5rem 1rem;
+        z-index: 99;
     }
 
     header nav #menu {
