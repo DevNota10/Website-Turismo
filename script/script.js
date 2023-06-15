@@ -37,13 +37,6 @@ window.onload = function(){
          
       }
 
-      // function nativeScroll(distanceFromTheTop){
-      //     window.scroll({
-      //         top: distanceFromTheTop,
-      //         behavior:"smooth"       
-      //     });
-      // };
-
       function  scrollToSection(event){
           event.preventDefault();
           const distanceFromTheTop = getDistanceFromTheTop(event.target) -90;
@@ -110,48 +103,71 @@ window.onload = function(){
 
   // Animações Hover links;
 
-  function hoverLinks(){
+  hoverLinks()
+  function hoverLinks(hover){
     const ColorParagrafoEstações = document.querySelectorAll(".text");
-    const sidebarLi = document.querySelectorAll("section .sidebar li a");
+    const sidebarLi_link = document.querySelectorAll("section .sidebar li a");
+    const sidebar = document.querySelectorAll(".sidebar")
 
-    sidebarLi.forEach((item,posLi)=>{
+    sidebarLi_link.forEach((item,posLi)=>{
   
+      const section = document.querySelectorAll(".section-img-place");// getbackground main     
+      
       item.addEventListener('mouseover',function(){
-        item.classList.add('img-li')
-        const section = document.querySelectorAll(".section-img-place");// getbackground main
-   
+        item.classList.add('img-li');
 
           if('img-li'){
-            
+          
+          
             const imgOfPlace = document.querySelector(".img-li .img-of-place");
-            const getImgOfPlace = window.getComputedStyle(imgOfPlace);
+            const getImgOfPlace = window.getComputedStyle(imgOfPlace);  
 
-            section[0].style.background = getImgOfPlace.backgroundImage
-            section[0].style.backgroundSize = 'cover'
-            section[0].style.backgroundRepeat = 'no-repeat'
-            section[0].style.transition = '0.5s'
-     
-             }else{
-               console.log('não tem')
-                              
+            item.addEventListener("click",function(e){
+              e.preventDefault();
+ console.log(posLi)
+                    for( var i = 0; i < section.length ; i ++){
+                        
+                      
+                       if( posLi < 10){
+                         section[0].style.background = getImgOfPlace.background;
 
-        }
-             
-        item.addEventListener('mouseout',function(){
-          item.classList.remove('img-li');
-          document.querySelector(".section-img-place").style.background= "url(./landscape/temple-5909803_1920.jpg)"
-        
-        })
+                       };
+                        if( posLi >= 10 &&  posLi  <= 20 ){
+                        section[1].style.background = getImgOfPlace.background;
 
-        
-      })
-    })
-    
-    
+                       };
+                        if( posLi >= 20 &&  posLi  <= 30 ){
+                        section[2].style.background = getImgOfPlace.background;
+
+                       };
+                        
+                        if( posLi >= 30 &&  posLi  <= 40 ){
+                        section[3].style.background = getImgOfPlace.background;
+
+                       };
+
+                    };
+                     
+            });
+
+        };
    
+      });
+    
+      item.addEventListener('mouseout',()=>{
+        item.classList.remove('img-li')
+      })
+
+
+    })
 
   }
-  hoverLinks()
+
+
+
+
+
+ 
 
 }
 
