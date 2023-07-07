@@ -50,8 +50,8 @@ window.onload = function(){
   })
 
   function smoothScrollTo(endX, endY, duration) {
-      const startX = window.scrollX || window.pageXOffset;
-      const startY = window.scrollY || window.pageYOffset;
+      const startX = window.scrollX || window.scrollX;
+      const startY = window.scrollY || window.scrollY;
       const distanceX = endX - startX;
       const distanceY = endY - startY;
       const startTime = new Date().getTime();
@@ -103,65 +103,66 @@ window.onload = function(){
 
   // Animações Hover links;
 
-  hoverLinks()
-  function hoverLinks(hover){
+  // hoverLinks()
+  // function hoverLinks(){
     const ColorParagrafoEstações = document.querySelectorAll(".text");
-    const sidebarLi_link = document.querySelectorAll("section .sidebar li a");
+    const sidebarLi_link = document.querySelectorAll("section .sidebar li > a ");
     const sidebar = document.querySelectorAll(".sidebar")
+    const section = document.querySelectorAll(".section-img-place");// getbackground main     
 
     sidebarLi_link.forEach((item,posLi)=>{
   
-      const section = document.querySelectorAll(".section-img-place");// getbackground main     
       
       item.addEventListener('mouseover',function(){
         item.classList.add('img-li');
 
-          if('img-li'){
-          
-          
             const imgOfPlace = document.querySelector(".img-li .img-of-place");
             const getImgOfPlace = window.getComputedStyle(imgOfPlace);  
 
             item.addEventListener("click",function(e){
               e.preventDefault();
- console.log(posLi)
+ 
+              // REFAZER EFEITO HOVER
+                
+              /*
                     for( var i = 0; i < section.length ; i ++){
+
+                        if(sidebar[0]  ){
+                          section[0].style.background = getImgOfPlace.background;
+                          
+                        }
+
+                        if(section[1] && sidebar[1]  ){
+                          section[1].style.background = getImgOfPlace.background;
+                          
+                        }
+
+                        if(section[2] || sidebar  ){
+                          section[2].style.background = getImgOfPlace.background;
+                          
+                        }
+
+                        if(section[3] || sidebar  ){
+                          section[3].style.background = getImgOfPlace.background;
+                          
+                        }
                         
-                      
-                       if( posLi < 10){
-                         section[0].style.background = getImgOfPlace.background;
-
-                       };
-                        if( posLi >= 10 &&  posLi  <= 20 ){
-                        section[1].style.background = getImgOfPlace.background;
-
-                       };
-                        if( posLi >= 20 &&  posLi  <= 30 ){
-                        section[2].style.background = getImgOfPlace.background;
-
-                       };
-                        
-                        if( posLi >= 30 &&  posLi  <= 40 ){
-                        section[3].style.background = getImgOfPlace.background;
-
-                       };
-
                     };
-                     
+              */       
             });
 
-        };
+        
    
       });
     
       item.addEventListener('mouseout',()=>{
         item.classList.remove('img-li')
-      })
+      });
 
 
-    })
+    });
 
-  }
+  // };
 
 
 }
