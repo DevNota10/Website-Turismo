@@ -82,7 +82,7 @@ window.onload = function(){
     const animationClass = 'animate';
   
     function animaScroll(){
-      const windowTop = window.scrollY + window.innerHeight * 3 / 4;
+      const windowTop = window.scrollY + window.innerHeight * 3 / 5;
   
       boxAnime.forEach(function(el){
        if((windowTop) > el.offsetTop){
@@ -114,41 +114,20 @@ window.onload = function(){
   
       
       item.addEventListener('mouseover',function(){
-        item.classList.add('img-li');
+        item.classList.add('active-img-li');
 
-            const imgOfPlace = document.querySelector(".img-li .img-of-place");
+            const imgOfPlace = document.querySelector(" .img-of-place");
+
             const getImgOfPlace = window.getComputedStyle(imgOfPlace);  
 
             item.addEventListener("click",function(e){
               e.preventDefault();
- 
+              
+              console.log('foi')
               // REFAZER EFEITO HOVER
+              // imgOfPlace.style.background ='red'
                 
-              /*
-                    for( var i = 0; i < section.length ; i ++){
-
-                        if(sidebar[0]  ){
-                          section[0].style.background = getImgOfPlace.background;
-                          
-                        }
-
-                        if(section[1] && sidebar[1]  ){
-                          section[1].style.background = getImgOfPlace.background;
-                          
-                        }
-
-                        if(section[2] || sidebar  ){
-                          section[2].style.background = getImgOfPlace.background;
-                          
-                        }
-
-                        if(section[3] || sidebar  ){
-                          section[3].style.background = getImgOfPlace.background;
-                          
-                        }
-                        
-                    };
-              */       
+     
             });
 
         
@@ -156,7 +135,7 @@ window.onload = function(){
       });
     
       item.addEventListener('mouseout',()=>{
-        item.classList.remove('img-li')
+        item.classList.remove('active-img-li')
       });
 
 

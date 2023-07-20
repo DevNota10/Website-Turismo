@@ -8,6 +8,33 @@
     clear: both;
 }
 
+:root {
+    --title-bg-color: linear-gradient(-45deg, #008000, #ffa500, #00fbff);
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    background: var(--title-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(-45deg, #00fbff, #008000);
+    border-radius: 20px;
+}
+
+/* FrameWOrk */
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background_img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
 body {
     height: 100%;
     background: #130000;
@@ -19,23 +46,15 @@ body {
     scroll-padding-top: 90px;
 } */
 
-::-webkit-scrollbar {
-    width: 20px;
-    background: linear-gradient(-45deg, #008000, #ffa500, #00fbff);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(-45deg, #00fbff, #008000);
-    border-radius: 20px;
-}
 
 header {
     width: 100%;
     height: 90px;
-    background: linear-gradient(-45deg, #008000, #ffa500, #00fbff);
+    background: var(--title-bg-color);
     padding: 0 2%;
     position: fixed;
     z-index: 99;
+    position: fixed;
 }
 
 header .container {
@@ -50,10 +69,6 @@ header .container {
 header .logo {
     width: 200px;
     height: 70px;
-    background-image: url(../img/logo-dev.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 header #btn-mobile {
@@ -61,17 +76,10 @@ header #btn-mobile {
     height: 40px;
     display: none;
     cursor: pointer;
-    background-image: url(../img/casa.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  
-   
 }
 
 header nav #menu {
     display: inline-flex;
-
 }
 
 header nav #menu li:hover {
@@ -81,6 +89,7 @@ header nav #menu li:hover {
 ul {
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
     font-size: 1.3rem;
@@ -105,14 +114,14 @@ header #menu li {
 header nav #menu li .sub-menu.subMenuActivo {
     display: block;
     position: absolute;
-    background: linear-gradient(#008000, #ffa500, #00fbff);
+    background: var(--title-bg-color);
     top: 50px;
     left: 0;
     transition: 0.5s;
 
 }
 
-/* ********************* Section Main *********************  */
+/*********** Section Main ***********/
 
 h1 {
     font-size: 130px;
@@ -127,13 +136,13 @@ h2 {
     font-size: 40px;
     text-align: center;
     padding: 10px;
-    background: linear-gradient(-45deg, #ffa500, #4dff00b8);
+    background: var(--title-bg-color);
 }
 
 h3 {
     font-size: 40px;
     text-align: center;
-    background: linear-gradient(-45deg, #00fbff, #008000);
+    background: var(--title-bg-color);
 }
 
 img {
@@ -143,18 +152,16 @@ img {
 
 section {
     max-width: 1400px;
+    height: 100%;
     margin: 0 auto;
     position: relative;
     top: 90px;
     display: flex;
-
-    width: 100%;
-    height: 100vh;
 }
 
-/* p {
+p {
     padding: 10px;
-} */
+}
 
 section p {
     font-size: 18px;
@@ -176,9 +183,7 @@ section p {
 
 section.background-main video {
     width: 100%;
-    min-width: 500px;
-    position: relative;
-   
+    border: 10px solid #1f6603
 }
 
 section.background-main .chamada-01 {
@@ -218,14 +223,14 @@ section.background-main .quote {
     bottom: 0px;
     right: 0;
     text-align: center;
-    color: #fff; 
+    color: #fff;
 }
 
-/* *************************************** Section Sobre *************************************** */
-section.sobre {   
+/***********Section Sobre ***********/
+section.sobre {
     width: 100%;
     max-height: 100%;
-    margin: 50px  auto;
+    margin: 50px auto;
     flex-direction: column;
 }
 
@@ -261,8 +266,11 @@ section.sobre .img-sobre {
     border-radius: 30px;
 }
 
-/* *************************************** Section Inverno *************************************** */
+/*********** Section Inverno ***********/
+section .sidebar{
+    max-width: 100%;
 
+}
 section .sidebar li {
     width: 100%;
     height: 70px;
@@ -271,16 +279,10 @@ section .sidebar li {
 }
 
 section .sidebar a {
-
     display: block;
     color: #000;
-    /* display: flex; */
-    align-items: center;
-    background: red;
-    font-size: 17px;
     text-align: center;
-
-
+    border-radius: 20px;
 }
 
 /* section .sidebar li a:hover{
@@ -289,27 +291,30 @@ section .sidebar a {
 } */
 
 
-section.section-img-place .sidebar .img-li {
+section.section-img-place .sidebar .active-img-li {
     width: 100%;
     height: 100%;
     transition: 0.5s;
     transform: scale(1.2);
-
-
 }
+
 /* Reposicionar conteudo da section */
 
 
-/* frameWork */
-section.section-img-place{
+/*********** frameWork ***********/
+section.section-img-place {
+
     justify-content: center;
     align-items: center;
+
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 50px;
+    border: 20px solid #96ed094d;
+     
 }
-
 
 section.inverno h1 {
     background: #ffffffbe;
@@ -318,13 +323,13 @@ section.inverno h1 {
     text-shadow: 5px 5px 1px #95949455;
 }
 
-section div.inverno p {
-    background: linear-gradient(-45deg, #00a6ff, #fff);
-    /* background-image: url(../img-Rs/bandeira-de-rio-grande-do-sul-brasil.webp); */
+section.inverno a, section.inverno p {
+    background: linear-gradient(-45deg, #00a6ff, #fff)
 }
 
 section .sidebar {
-    max-width: 300px;
+    width: 100%;
+    max-width: 200px;
     max-height: 100%;
     padding: 10px;
     background: #000;
@@ -334,56 +339,45 @@ section .sidebar li {
     background-position: center;
     background-size: cover;
     text-align: center;
-    
-
 }
 
-section.inverno .sidebar a {
-    background: linear-gradient(-45deg, #00a6ff, #fff);
-}
 
 section .img-of-place {
-    width: 100px;
-    height: 150%;
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
 
     position: relative;
-    right: -250px;
-    transform: scale(2.2);
+    right: -120px;
+    top: -20px;
+    transform: scale(1.5);
 
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 1s;
+    transition: 0.5s;
 }
 
-/* *************************************** Section Primavera *************************************** */
+/*********** Section Primavera ***********/
 
 
 section.primavera h1 {
     background: linear-gradient(-45deg, #3b6603, #06e606);
     color: #000;
-  
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 5px 5px 1px #e30a0afe;
 }
 
-section.primavera div.primavera p {
+section.primavera a, section.primavera p {
     background: linear-gradient(-45deg, #26ff00, #fff);
-  
 }
 
-section.primavera .sidebar a {
-    background: linear-gradient(-45deg, #26ff00, #fff);
-
-}
-
-/* *************************************** Section Verão *************************************** */
+/*********** Section Verão ***********/
 
 section.verao h1 {
-
     background: linear-gradient(-45deg, #3b6603, #06e606);
     color: #000;
 
@@ -392,18 +386,12 @@ section.verao h1 {
     text-shadow: 5px 5px 1px #e3ca0afe;
 }
 
-section.verao div.verao p {
+section.verao .verao p, section.verao a {
     background: linear-gradient(-45deg, #ff5100, #f0d908);
 }
 
-section.verao .sidebar a {
-    background: linear-gradient(-45deg, #ff5100, #f0d908);
 
-}
-
-/* *************************************** Section Outono *************************************** */
-
-
+/*********** Section Outono ***********/
 section.outono h1 {
     background: linear-gradient(-45deg, #ed3203, #06e606);
     color: #000;
@@ -412,16 +400,12 @@ section.outono h1 {
     text-shadow: 5px 5px 1px #e34f0afe;
 }
 
-section.outono div.outono p {
+section.outono .outono p, section.outono a {
     background: linear-gradient(-45deg, #ff5100, #f0d908, green);
 }
 
-section.outono .sidebar a {
-    background: linear-gradient(-45deg, #ff5100, #f0d908, green);
 
-}
-
-/* *************************************** Section Contato *************************************** */
+/*********** Section Contato ***********/
 
 section.contato {
     width: 100%;
@@ -429,13 +413,12 @@ section.contato {
     padding: 100px 0;
 
     background: linear-gradient(-45deg, #ff5100, #f0d908, #008000);
-
     animation: gradient-animation ease-in-out 10s infinite;
     background-size: 300% 300%;
 }
 
 section.contato fieldset {
-    margin: 0 auto;
+
     width: 400px;
     max-height: 100%;
     padding: 50px;
@@ -448,6 +431,7 @@ section.contato fieldset {
 section.contato legend {
     font-size: 20px;
     padding: 0 20px;
+
 }
 
 section.contato form input[type='text'] {
@@ -480,50 +464,44 @@ section.contato form textarea {
     margin-bottom: 40px;
 }
 
-/* *************************************** Section Footer *************************************** */
+/*********** Section Footer ***********/
 
-footer {
+footer .container {
     width: 100%;
-    height: 400px;
+    min-height: 200px;
     background: linear-gradient(-45deg, #ff5100, #f0d908, #008000);
-    position: relative;
 
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
 }
 
+footer .container div:nth-child(2) {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+
 footer .logo-footer {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 100px;
     background-image: url(../img/logo-dev.png);
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-footer .box-social-media {
-    max-width: 300px;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
 footer .icon {
-    font-size: 50px;
-    color: rgb(9, 89, 2);
+    font-size: 40px;
+    color: #130000;
+    ;
     cursor: pointer;
-}
-
-footer .text-footer {
-    max-width: 100%;
-    display: flex;
-
-    gap: 10px;
-    font-size: 20px;
 }
 
 footer .copy {
     width: 20px;
-
 }
 
 /* Animação div.seasons */
@@ -554,30 +532,9 @@ footer .copy {
     100% {
         background-position: 0 50%;
     }
-
 }
 
-/* *************************************** Media Queries  *************************************** */
-
-
-@media screen and (max-width:1200px) {
-/* 
-    section h1 {
-        font-size: 130px;
-    } */
-
-    footer>.container {
-        flex-direction: column;
-        background: rgb(106, 255, 0);
-        gap: 30px;
-    }
-
-    /* section.background-main .chamada-01 {
-        width: 100%;
-        top: 0;
-
-    } */
-}
+/*********** Media Queries  ***********/
 
 @media screen and (max-width:750px) {
 
@@ -585,7 +542,6 @@ footer .copy {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
     }
 
     header #btn-mobile {
@@ -614,13 +570,12 @@ footer .copy {
         transition: 1s;
         visibility: hidden;
         overflow-y: hidden;
-
     }
 
     header nav.active #menu {
         display: block;
         top: 90px;
-        height: calc(100vh - 90px);
+        height: 100vh;
         transition: 1s;
         visibility: visible;
         /* overflow-y: auto; */
@@ -638,14 +593,12 @@ footer .copy {
         top: 0px;
         left: 110px;
         z-index: 99;
-
     }
 
     /* Media queries sections */
 
     section h1 {
         font-size: 70px;
-
     }
 
     section.background-main p {
@@ -659,7 +612,6 @@ footer .copy {
 
     section.sobre .text-wrapper {
         max-width: 100%;
-
     }
 
     section.sobre .img-sobre {
@@ -668,32 +620,39 @@ footer .copy {
         background-size: cover;
     }
 
+    footer>.container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
 }
 
 @media screen and (max-width:540px) {
-
-    
     section h1 {
         font-size: 50px;
     }
+    section.background-main  p {
+        font-size: 15px;
+        display: none;
+    }
 
- 
-  
-    section.background-main .quote {
-      display: none; 
+    section.background-main  .quote p {
+        display: block;
+      
     }
 
     section span {
         font-size: 12px;
     }
 
-    section.background-main p {
-        font-size: 15px;
-    }
-
+  
     section.contato fieldset {
         padding: 10px;
 
     }
+
+
+
 
 }
