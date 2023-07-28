@@ -23,19 +23,19 @@ subMenu.classList.toggle("subMenuActivo");
 // Text About the place:
 const openTxt = document.querySelectorAll(".btn-open-txt");
 
-openTxt.forEach((arrow)=>{
-  arrow.addEventListener("click",()=>{
-    openTxtBox(arrow)
-    console.log('clicou')
-  })
+ const mybtn = openTxt.forEach((x)=>{
+  x.addEventListener('click',()=>{
+    x.parentElement.parentElement.parentElement.classList.toggle("open-text-place");
+    let getOpenTextPlace = document.querySelector(".open-text-place")
+    if(getOpenTextPlace){
+      x.innerHTML='close'
+      x.style.borderRadius=' 50%'
+    }else{
+      x.innerHTML='open'
+    }
+  });
+  
 })
 
 
-// Corrigir btn de abertura do texto:
-function openTxtBox(arrow){
-const scrollContainer = document.querySelectorAll(".scroll-container");
-scrollContainer.forEach((item)=>{
-  item.classList.toggle("open-text-place")
-})
 
-}

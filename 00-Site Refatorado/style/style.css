@@ -167,16 +167,19 @@ header nav #menu li .sub-menu.subMenuActivo {
 
 .text-call-2{
   margin-top: 100px;
-  max-width: 500px;  
+  max-width: 600px;  
   margin: 0 auto;
-  /* display: flex; */
+  padding: 10px;
+
+  text-align: center;
+  background: #008000;
+  border-radius: 20px;
  
 }
 .text-call-2 h3{
     padding: 20px 0;
     color: #fffc2f;
-    letter-spacing: 1px;
-    text-shadow: 4px 4px 4px #000;
+    letter-spacing: 1px;  
 }
 
 /* --------------Sections -------------- */
@@ -220,14 +223,15 @@ section .box-about-us:nth-child(2){
 section.seasons  .btn-open-txt{
     width: 60px;
     height: 60px;
-    background: #000; 
+    background: red; 
     position: absolute;
-    right:-25px ;
+    /* right:-25px ; */
+    right:-50px;
 
     text-transform: uppercase;
     
     cursor: pointer;
-    transform: rotate(45deg);
+    transform: rotate(40deg);
     transition: 1s;   
 
     animation: anime-btn-txt-place  2.5s ease-in-out infinite;
@@ -313,15 +317,16 @@ section.seasons .container{
 @keyframes anime-btn-txt-place {
     0%,100%{
     
-        background: #000; 
+        background: red; 
+        width: 80px;
     }
     50%{
        
-
         background: green;
+        transform: rotate(0deg);
+        width: 80px;
         
     }
-    
 }
 
 /*********** Media Queries  ***********/
