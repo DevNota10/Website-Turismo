@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
 }
 
 :root {
-    --title-bg-color: linear-gradient(45deg, #008000, #ffa500, #00fbff,#000);
+    --title-bg-color: linear-gradient(45deg, #008000, #ffa500, #00fbff, #000);
 }
 
 ::-webkit-scrollbar {
@@ -18,10 +18,12 @@
     background: linear-gradient(-45deg, #00fbff, #008000);
     border-radius: 20px;
 }
-body{
+
+body {
 
     background: #130000;
     /* background: linear-gradient(-75deg,#2a34a5,#008000,#000,#ffff00); */
+    height: 100%;
 }
 
 ul {
@@ -38,20 +40,21 @@ a {
 }
 
 
-p{
+p {
     width: 100%;
     font-size: 19px;
     padding: 10px;
-    text-align: justify;  
+    text-align: justify;
 }
 
-h1{
+h1 {
     background: var(--title-bg-color);
-    -webkit-background-clip:text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
 }
@@ -62,7 +65,7 @@ header {
     background: var(--title-bg-color);
     padding: 0 2%;
     position: fixed;
-    z-index: 99;  
+    z-index: 99;
 }
 
 header .container {
@@ -77,7 +80,7 @@ header .logo {
     height: 70px;
 }
 
- #btn-mobile {
+#btn-mobile {
     width: 40px;
     height: 40px;
     display: none;
@@ -103,6 +106,7 @@ header .sub-menu {
     display: none;
     transition: 0.5s;
 }
+
 header nav #menu li .sub-menu.subMenuActivo {
     display: block;
     position: absolute;
@@ -111,6 +115,7 @@ header nav #menu li .sub-menu.subMenuActivo {
     left: 0;
     transition: 0.5s;
 }
+
 /* ----------------------------------------- */
 
 /* FrameWOrk */
@@ -125,164 +130,173 @@ header nav #menu li .sub-menu.subMenuActivo {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat ;  
+    background-repeat: no-repeat;
 }
-.container{
-   height: 100%;
-   margin: 0 auto;
-   max-width: 1200px;
-     
+
+.container {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+
 }
+
 /* ------------------------------------------ */
 
-.main, section{
+.main, section {
     margin: 0px auto;
     max-width: 1200px;
     height: 100%;
-    padding: 0 2%;
-    
     position: relative;
     top: 90px;
 }
 
-.main .text-call-01{
+
+
+.main .text-call-01 {
     width: 90%;
     font-size: 18px;
 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     background: linear-gradient(-45deg, #0ceb0c7e, #0000008e 70%, #0080003a, #ffff005d, #000);
-    color: #fff;
 
 }
-.main h1{
-    font-size: 12vw;
+
+.main h1 {
+    font-size: 10vw;
     background: -webkit-linear-gradient(45deg, #00eaff6f, #4dff00b8, #00800055);
-    -webkit-background-clip:text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
+    
 }
 
-.text-call-2{
-  margin-top: 100px;
-  max-width: 600px;  
-  margin: 0 auto;
-  padding: 10px;
+.text-call-2 {
 
-  text-align: center;
-  background: #008000;
-  border-radius: 20px;
- 
+    max-width: 600px;
+    margin: 150px auto;
+    padding: 20px;
+    text-align: center;
+    background: #303030;
+    border-radius: 20px;
+
 }
-.text-call-2 h3{
+
+.text-call-2 h3 {
     padding: 20px 0;
-    color: #fffc2f;
-    letter-spacing: 1px;  
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: justify;
 }
 
 /* --------------Sections -------------- */
 
-section{
-    padding: 50px 2%;
+section {
+    /* padding: 50px 2%; */
     /* border: 10px solid red; */
+    margin: 50px  auto;
+    padding: 50px;
     position: relative;
-    overflow: hidden;   
-    margin-bottom: 100px;
+    overflow: hidden;
+    background: #180202;
+    border-radius: 20px;
 }
 
-section h1{
-    font-size: 1.5rem;
-    text-align: center;
-}
-section .box-about-us{
+
+section .box-about-us {
     gap: 10px;
 
 }
-section .text-about-us{
-    width:50%;
-    align-items: center; 
+
+section .text-about-us {
+    width: 50%;
+    align-items: center;
 }
-section .text-about-us h1{
+
+section .text-about-us h1 {
     max-width: 100%;
     background: var(--title-bg-color);
-    -webkit-background-clip:text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-section .img-about-us{
+
+section .img-about-us {
     max-width: 50%;
     padding: 200px;
     background-repeat: no-repeat;
 }
 
-section .box-about-us:nth-child(2){
-    flex-direction: row-reverse;   
+section .box-about-us:nth-child(2) {
+    flex-direction: row-reverse;
 }
+
 /* -------------- Sections Seasons -------------- */
-section.seasons  .btn-open-txt{
+section.seasons .btn-open-txt {
     width: 60px;
     height: 60px;
-    background: red; 
+    background: red;
     position: absolute;
-    /* right:-25px ; */
-    right:-50px;
+    right: -50px;
 
     text-transform: uppercase;
-    
+
     cursor: pointer;
     transform: rotate(40deg);
-    transition: 1s;   
+    transition: 1s;
 
-    animation: anime-btn-txt-place  2.5s ease-in-out infinite;
-
-}
-section.seasons .scroll-container{
-width: 100%;
-height: 100%;
-
-position: relative;
-left: -100%;
-transition: 1s;
-filter: drop-shadow(8px 8px 8px #fff );
-
-border-radius: 30px;
-
+    animation: anime-btn-txt-place 2.5s ease-in-out infinite;
 
 }
 
-section.seasons  .open-text-place{
+section.seasons .scroll-container {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    left: -101%;
+    transition: 1s;
+    filter: drop-shadow(8px 8px 8px #fff);
+ 
+}
+
+section.seasons .open-text-place {
     max-width: 100%;
-    left: -20px;  
+    left: -20px;
     background-color: #000000f7;
 }
 
-section.seasons  .text-about-the-place{
+section.seasons .text-about-the-place {
     height: 100%;
     line-height: 30px;
     text-align: justify;
-    transition: 1s ;
-   
+    transition: 1s;
 }
 
-section.seasons p{
-    padding: 20px 40px ;  
+
+section.seasons p {
+    padding: 20px 40px;
     font-size: 18px;
     color: #fff;
-    background-color: #00000095; 
-   
+    background-color: #00000095;
+
 }
-section.seasons strong{
+
+section.seasons strong {
     text-decoration: underline;
 }
 
-section.seasons .text-about-the-place .txt-part-2{
-    /* visibility: hidden; */
+section.seasons .text-about-the-place .txt-part-2 {
     display: none;
-    /* height: 10px; */
+  
+    position: relative;
+    transition: 1s;
+
 }
 
-section .sidenav{
+section .sidenav {
     width: 100%;
     max-height: 100%;
     background: #000000bf;
@@ -291,18 +305,54 @@ section .sidenav{
     left: 0;
 }
 
-section.seasons .container{
+section.seasons .container {
     width: 100%;
     height: 100%;
     margin-bottom: 100px;
 }
+section.seasons .container .closeTxt{
+    width: 30px;
+    height: 30px;
+    background: #bbbb;
+    color: #fff;
+    font-weight: bold;
 
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+
+}
 /* -------------- Springtime-------------- */
 
 /* section.springtime .text-about-the-place{    
     background: linear-gradient(-45deg, #26ff00, #fff,#800080,#ff0000);  
    
 } */
+section.springtime > h1{
+    font-size: 8vw;
+    background: -webkit-linear-gradient(45deg, #00eaff, #4dff00, #008000,#ff0000 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* -------------- Summer-------------- */
+section.summer > h1{
+    font-size: 8vw;
+    background: -webkit-linear-gradient(45deg, #ffff00 10%, #ffa500,#ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+/* -------------- Fall-------------- */
+section.fall > h1{
+    font-size: 8vw;
+    background: -webkit-linear-gradient(-35deg,#ffff00 40%, #ed3203, #06e606);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 /* -------------- winter-------------- */
 
@@ -313,17 +363,18 @@ section.seasons .container{
 } */
 
 @keyframes anime-btn-txt-place {
-    0%,100%{
-    
-        background: red; 
+    0%, 100% {
+
+        background: red;
         width: 80px;
     }
-    50%{
-       
+
+    50% {
+
         background: green;
         transform: rotate(0deg);
         width: 80px;
-        
+
     }
 }
 
