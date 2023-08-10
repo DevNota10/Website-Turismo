@@ -99,8 +99,13 @@ subMenu.classList.toggle("subMenuActivo");
       x.addEventListener('click',()=>{
        
      const getTxtPart2 = x.parentNode.parentNode.parentNode.querySelector(".txt-part-2");
-     getTxtPart2.style.display='block'
+     getTxtPart2.style.display='block';
+     getTxtPart2.style.height='100vh'
+  
      x.style.display='none'
+     
+     
+
 
      const closeTxt = document.createElement("div");
      closeTxt.className ='closeTxt';
@@ -119,7 +124,11 @@ subMenu.classList.toggle("subMenuActivo");
     cloExpTxt.forEach((item)=>{
       item.addEventListener('click',()=>{
         x.style.display='flex';
-        getTxtPart2.style.display='none'
+        // getTxtPart2.style.display='none';
+        getTxtPart2.style.transition='1s';
+        getTxtPart2.style.height='0';
+
+      
       })
 
     })
@@ -127,17 +136,7 @@ subMenu.classList.toggle("subMenuActivo");
 
 
     
-    // addEventListener('click',()=>{
-    //   console.log('foi')
-    //   x.style.display='flex';
-    //  if( getTxtPart2.style.display ==='none'){
-    //   getTxtPart2.style.display='block';
-    //  }else{
-    //   getTxtPart2.style.display='none';
-    //  }
   
-
-    // })
    }
 
 
