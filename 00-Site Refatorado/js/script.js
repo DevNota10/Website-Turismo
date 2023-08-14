@@ -98,14 +98,18 @@ subMenu.classList.toggle("subMenuActivo");
     txtContinue.forEach((x,pos)=>{
       x.addEventListener('click',()=>{
        
-     const getTxtPart2 = x.parentNode.parentNode.parentNode.querySelector(".txt-part-2");
-     getTxtPart2.style.display='block';
-     getTxtPart2.style.height='100vh'
-  
+     const getTxtPart2 = x.parentNode.parentNode.parentNode.querySelector(".txt-part-2  ");
+
+
+    //  getTxtPart2.style.display='inline-block';
+     getTxtPart2.style.height='70vh'
+
+     getTxtPart2.style.opacity='1'
+     getTxtPart2.style.transform='rotate(0deg)'
+    
+    
      x.style.display='none'
      
-     
-
 
      const closeTxt = document.createElement("div");
      closeTxt.className ='closeTxt';
@@ -124,10 +128,12 @@ subMenu.classList.toggle("subMenuActivo");
     cloExpTxt.forEach((item)=>{
       item.addEventListener('click',()=>{
         x.style.display='flex';
-        // getTxtPart2.style.display='none';
-        getTxtPart2.style.transition='1s';
-        getTxtPart2.style.height='0';
 
+        getTxtPart2.style.height='0';
+        getTxtPart2.style.opacity='0';
+        getTxtPart2.style.transform='rotate(10deg)';
+  
+  
       
       })
 
