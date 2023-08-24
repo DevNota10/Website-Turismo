@@ -75,6 +75,13 @@ subMenu.classList.toggle("subMenuActivo");
 
 }
 
+// Animation of Section About 
+// function animateSecAbout(){
+//   const txtAboutUs = document.querySelector(".text-about-us");
+
+// }
+
+
 // Text About the place:
   const openTxt = document.querySelectorAll(".btn-open-txt");
   const mybtn = openTxt.forEach((x)=>{
@@ -102,7 +109,7 @@ subMenu.classList.toggle("subMenuActivo");
 
 
     //  getTxtPart2.style.display='inline-block';
-     getTxtPart2.style.height='70vh'
+     getTxtPart2.style.height='100%'
 
      getTxtPart2.style.opacity='1'
      getTxtPart2.style.transform='rotate(0deg)'
@@ -133,8 +140,6 @@ subMenu.classList.toggle("subMenuActivo");
         getTxtPart2.style.opacity='0';
         getTxtPart2.style.transform='rotate(10deg)';
   
-  
-      
       })
 
     })
