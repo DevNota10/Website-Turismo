@@ -118,6 +118,7 @@ header nav #menu li .sub-menu.subMenuActivo {
 /* ----------------------------------------- */
 
 /* FrameWork */
+
 .flex_center {
     display: flex;
     align-items: center;
@@ -127,7 +128,7 @@ header nav #menu li .sub-menu.subMenuActivo {
 .bg_img {
     width: 100%;
     height: 100%;
-    background-size: cover;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -252,38 +253,40 @@ section .fx > h1{
 }
 
 section.about-us .box-about-us{
-    padding-top: 200px;
+    padding: 100px 0;
     gap: 40px;
+    border: 40px solid transparent;
+    border-image: url(../img/brazil-3001462_1280.png) round;
+    border-image-slice: 10%;
+    box-shadow: 10px 10px 50px 10px rgba(0, 255, 0, 0.599) inset;
 }
 
-
 section.about-us .text-about-us {
-    width: 60%;
     max-width: 450px;
     align-items: center;
     margin-bottom: 100px;
     background: linear-gradient(-45deg,#818382,#130000);
-   
+    transition: 1s;
 }
 
 section.about-us .bx-img-about{
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 100px;
     background: linear-gradient(-45deg,#818382,#130000);
-  
+    transition: 1s;
 } 
+
 section.about-us .text-about-us div{
     text-align: center;
     background-image: url(../img/brazil-3001462_1280.png);
     padding: 10px ;  
     transition: 0.5s;
-    transform: rotate(-10deg); 
+    transform: rotate(-10deg);    
 }
 
 section.about-us .text-about-us div:hover{
     transition: 0.5s;
     transform: rotate(0deg);
-    clip-path:none;
 }
 
 section.about-us .text-about-us div p{
@@ -293,12 +296,8 @@ section.about-us .text-about-us div p{
 }
 
 section.about-us .img-about-us{
-   /* width: 100%; */
-   /* height: 100%; */
    transform: rotate(10deg); 
    transition: 0.5s;
-   padding-top: 40%;
-
 }
 
 section.about-us .img-about-us:hover{
@@ -313,6 +312,7 @@ section.about-us .box-about-us:nth-child(2) {
 
 section.seasons{
     margin: 150px  auto;
+    
 }
 section.seasons > h1{
  font-size: 100px;
@@ -383,16 +383,33 @@ section .sidenav {
     background: #000000bf;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; 
+
    
 }
 
+section .idx-place h2{
+    color: #424040;
+    
+}
 section .sidenav > ul{
     flex-wrap: wrap;
     gap: 10px;
 }
-section .sidenav a:hover{
-    color: greenyellow;
+section .sidenav li{
+    width: 25px;
+    height: 25px;
+    background: #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+    color: #000;
+    transition: 0.5s;
+}
+section .sidenav li:hover{
+    color: #ff0000;
+    
 }
 section.seasons .container {
     margin-bottom: 100px;
@@ -450,6 +467,13 @@ footer{
     padding: 100px;
     background: linear-gradient(-45deg,#05be39,#ff0000);
 }
+footer .container{
+    justify-content: space-between;
+}
+footer .logo{
+    width: 150px;
+    height: 70px;
+}
 
 @keyframes anime-btn-txt-place {
     0%, 100% {
@@ -499,11 +523,6 @@ footer{
         visibility: hidden;
         overflow-y: hidden;
 
-        /* add Imagem  */
-        /* background:#007780;
-        background-image: url(../img/palms-37822.svg);
-        background-repeat: no-repeat;
-        background-size: cover; */
     }
 
     header nav.active #menu {
@@ -558,9 +577,8 @@ footer{
         flex-direction: column;
     }
    
-
     section.seasons{
-        padding: 5px;
+        padding: 30px 5px;
     }
     section.seasons > h1{
         font-size: 40px;
