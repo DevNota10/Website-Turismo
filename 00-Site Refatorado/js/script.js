@@ -157,7 +157,6 @@ animateSecAbout()
       });
     });
   };
-
    closeExpandText = (x,getTxtPart2) =>{
 
     const cloExpTxt =  document.querySelectorAll(".closeTxt");
