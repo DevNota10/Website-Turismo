@@ -254,7 +254,6 @@ section.about-us .box-about-us{
     padding: 100px 0;
     gap: 40px;
     border: 40px solid transparent;
-    border-image: url(../img/brazil-3001462_1280.png) round;
     border-image-slice: 10%;
     box-shadow: 10px 10px 50px 10px rgba(0, 255, 0, 0.599) inset;
 }
@@ -265,13 +264,15 @@ section.about-us .text-about-us {
     margin-bottom: 100px;
     background: linear-gradient(-45deg,#818382,#130000);
     transition: 1s;
+
 }
 
 section.about-us .bx-img-about{
-    height: 600px;
+    height: 400px;
     width: 100px;
     background: linear-gradient(-45deg,#818382,#130000);
     transition: 1s;
+    
 } 
 
 section.about-us .text-about-us div{
@@ -300,6 +301,7 @@ section.about-us .img-about-us{
 
 section.about-us .img-about-us:hover{
     transform: rotate(0deg); 
+   
 }
 
 section.about-us .box-about-us:nth-child(2) {

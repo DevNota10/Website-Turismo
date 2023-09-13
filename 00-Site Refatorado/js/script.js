@@ -102,7 +102,7 @@ function animateSecAbout(){
   const bxImgAbout = document.querySelectorAll(".bx-img-about");
   bxImgAbout.forEach((target)=>{
     target.addEventListener("mouseover",()=>{
-      target.style.width='90%';
+      target.style.width='100%';
     });
 
     target.addEventListener('mouseout',()=>{
