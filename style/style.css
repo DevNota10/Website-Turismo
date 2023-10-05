@@ -71,7 +71,9 @@ header {
 
 header .container {
     height: 100%;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
@@ -148,8 +150,13 @@ header nav #menu li .sub-menu.subMenuActivo {
     border-radius: 20px;
     text-align: center; 
 
-    display: none;
-    /* animation: warning  10s ease-in-out infinite; */
+    /* display: none; */
+    animation: warning  10s ease-in-out infinite;
+}
+
+.bd-r-top-end-bottom{
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
 }
 
 @keyframes warning {
@@ -253,25 +260,27 @@ section .fx > h1{
 section.about-us .box-about-us{
     padding: 100px 0;
     gap: 40px;
-    border: 40px solid transparent;
     border-image-slice: 10%;
-    box-shadow: 10px 10px 50px 10px rgba(0, 255, 0, 0.599) inset;
+    box-shadow: 10px 10px 50px 10px #053205 inset;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
 }
 
 section.about-us .text-about-us {
-    max-width: 450px;
+    width: 50%;
     align-items: center;
     margin-bottom: 100px;
-    background: linear-gradient(-45deg,#818382,#130000);
     transition: 1s;
+    
+    background: linear-gradient(45deg,#000,#d0cdcd);
 
 }
 
 section.about-us .bx-img-about{
-    height: 400px;
-    width: 100px;
-    background: linear-gradient(-45deg,#818382,#130000);
+    height: 600px;
+    min-width: 50%;
     transition: 1s;
+    background: linear-gradient(45deg,#000,#d0cdcd);
     
 } 
 
@@ -281,6 +290,7 @@ section.about-us .text-about-us div{
     padding: 10px ;  
     transition: 0.5s;
     transform: rotate(-10deg);    
+
 }
 
 section.about-us .text-about-us div:hover{
@@ -292,6 +302,9 @@ section.about-us .text-about-us div p{
     color: #fff;
     background: #0000009d;
     line-height: 30px;
+
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
 }
 
 section.about-us .img-about-us{
@@ -301,7 +314,6 @@ section.about-us .img-about-us{
 
 section.about-us .img-about-us:hover{
     transform: rotate(0deg); 
-   
 }
 
 section.about-us .box-about-us:nth-child(2) {
@@ -532,7 +544,6 @@ footer .logo{
         transition: 1s;
         visibility: visible;
         /* overflow-y: auto; */
-   
     }
 
     #menu li {
@@ -563,9 +574,14 @@ footer .logo{
         gap: 10px;
         flex-direction: column;
         width: 100%;
-        /* padding: 20px; */
+        border-radius: 0;
     
     }
+    section.about-us .bx-img-about{
+        min-width: 100%;
+      
+    } 
+
 
     section.about-us .text-about-us {
         align-items: center;
